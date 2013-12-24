@@ -2,8 +2,10 @@
 
 -export ([start/0, main/1]).
 
--define (BYTE, 1/little-unsigned-integer-unit:8).
--define (WORD, 1/little-unsigned-integer-unit:16).
+-define (BYTE, 1/little-signed-integer-unit:8).
+-define (WORD, 1/little-signed-integer-unit:16).
+-define (UBYTE, 1/little-unsigned-integer-unit:8).
+-define (UWORD, 1/little-unsigned-integer-unit:16).
 
 start () ->
   {ok, [FileNames]} = init:get_argument (file),
